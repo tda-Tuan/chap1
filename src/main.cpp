@@ -1,5 +1,5 @@
 #include "include/list.h"
-
+#include "include/database.h"
 
 int main(int arg_length, char *args[]){
 
@@ -11,6 +11,8 @@ int main(int arg_length, char *args[]){
     else{
         cout << "Username not found.. exiting the program" << endl;
     }
+    Database data;
+    data.write();
 
     return 0;
 
