@@ -50,12 +50,15 @@ void List::add_item(){
 void List::delete_item(){
 
     cout << "**** Delete Item ****\n";
-    cout << "Select the index item to delete\n";
+    cout << "Select the index item to delete: \n";
 
     if(list.size()){
-        for(int i = 0; i < list.size(); i++){
+        for(unsigned int i = 0; i < list.size(); i++){
             cout << i << ": " << list[i] << "\n";
         }
+        int choiceNum;
+        cin >> choiceNum;
+        list.erase(list.begin() + choiceNum);
     }
     else{
         cout << "No item to delete.\n";
@@ -66,7 +69,7 @@ void List::delete_item(){
 void List::print_list(){
     cout << "\n\n\n\n\n\n";
     cout << "**** Printing list *****\n";
-    for (int list_index = 0; list_index < list.size(); list_index++){
+    for (unsigned int list_index = 0; list_index < list.size(); list_index++){
         cout << " * " << list[list_index] << "\n";
     }
 
